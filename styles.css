@@ -1,0 +1,370 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    /* Reducir la altura del header */
+    background-color: #fcff5c;
+    /* Cambia el color según tus preferencias */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    /* Reducir el ancho del header al 80% del contenedor */
+    max-width: 1000px;
+    /* Ancho máximo para el contenido */
+}
+
+.header-content img {
+    height: 60px;
+    /* Ajusta el tamaño de la imagen */
+    margin-right: 40px;
+    /* Separar la imagen de los enlaces */
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.nav-links a {
+    display: block;
+    text-align: center;
+    width: 12.5%;
+    /* 1/8 del ancho de la pantalla (100% / 8) */
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #007BFF;
+    /* Efecto hover */
+}
+
+
+nav {
+    justify-content: center;
+    display: flex;
+
+}
+
+
+
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 15px;
+}
+
+section {
+    flex: 3;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+aside {
+    flex: 0.6;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+
+
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+
+}
+
+
+.contenedor {
+    
+ display: flex;
+    
+    
+flex-direction: column;
+/* Stack elements vertically */
+    
+justify-content: center;
+            /* Center elements vertically */
+align-items: center;
+            /* Center elements horizontally */
+width: 90%;
+
+
+margin: 5px auto;
+padding:20px ;
+background-color: #ffffff;
+border-radius: 10px;
+box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+gap: 0px;
+margin-top: 5px;
+        
+}
+
+
+/* Estilo para la imagen */
+.imagen {
+    width: 70px;
+    /* Tamaño reducido de la imagen */
+    height: auto;
+    border-radius: 5px;
+}
+
+.imagen1{
+    width: 70px;
+    height: 50px;
+    border-radius: 5px;
+}
+.imagen2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.imagen3{
+    border-radius: 10px;
+
+    width: 350px;
+}
+
+
+/* Estilo para los enlaces */
+.enlaces {
+    display: flex;
+    justify-content: space-between;
+    /* Espacio uniforme entre los enlaces */
+    width: 100%;
+    /* Asegura que los enlaces cubran todo el ancho del contenedor */
+}
+
+.enlaces a {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 15px;
+    background-color: #34a743;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    flex: 1;
+    /* Hace que cada enlace ocupe espacio igual */
+    text-align: center;
+    /* Centra el texto dentro de cada enlace */
+    margin: 0 5px;
+    /* Espacio entre los enlaces */
+}
+
+.enlaces a:hover {
+    background-color: #d0d0d0;
+}
+
+
+
+
+
+footer {
+    text-align: center;
+    background-color: #3cba54;
+    color: white;
+    padding: 10px 0;
+    height: 60px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+.carousel-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    
+    
+        
+
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    position: relative;
+   
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.carousel-text {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    /* White with transparency */
+    border: none;
+    color: #008000;
+    /* Green */
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.carousel-button:hover {
+    background-color: #ffff00;
+    /* Yellow */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* Takes the full width of the carousel item */
+    height: 100%;
+    /* Takes the full height of the carousel item */
+   
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    
+    
+
+    
+}
+.titulo-centro {
+    text-align: center;
+    /* Center the title */
+    margin-bottom: 5px;
+    /* Space between title and content */
+ 
+}
+
+.a1{
+    background-color: gold;
+}
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* El contenido del menú desplegable (oculto por defecto) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#fcff5c ;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Estilos de los enlaces dentro del menú desplegable */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Mostrar el menú desplegable cuando se pasa el cursor */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Cambia el color de fondo al pasar el cursor sobre los enlaces */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+.containerr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.sectionn {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+

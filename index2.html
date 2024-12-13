@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipos Deportivos</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body>
+
+
+    <!-- Contenedor con los equipos -->
+    <div class="team-container">
+        <div class="team" onclick="toggleInfo('team1')">
+            <img src="imagenes/pielroja.jpg" alt="Equipo 1">
+            <h3>pieles rojas</h3>
+        </div>
+        <div class="team" onclick="toggleInfo('team2')">
+            <img src="imagenes/aztecas.jpg" alt="Equipo 2">
+            <h3>aztecas</h3>
+        </div>
+        <div class="team" onclick="toggleInfo('team3')">
+            <img src="imagenes/boom.jpg" alt="Equipo 3">
+            <h3>Boom</h3>
+        </div>
+        <div class="team" onclick="toggleInfo('team4')">
+            <img src="imagenes/pinguis.jpg" alt="Equipo 4">
+            <h3>penguin</h3>
+        </div>
+        <div class="team" onclick="toggleInfo('team5')">
+            <img src="imagenes/eternalslogo.jpg" alt="Equipo 5">
+            <h3>eternals black</h3>
+        </div>
+        <div class="team" onclick="toggleInfo('team6')">
+            <img src="imagenes/logosehaks.jpg" alt="Equipo 6">
+            <h3>seahaks</h3>
+        </div>
+        <div class="team" onclick="toggleInfo('team7')">
+            <img src="imagenes/tazos.jpg.png" alt="Equipo 7">
+            <h3>tazos dorados</h3>
+        </div>
+       
+        <div class="team" onclick="toggleInfo('team8')">
+            <img src="imagenes/whiteeternals.jpg.png" alt="Equipo 8">
+            <h3>Eternals white</h3>
+        </div>
+        <!--
+        <div class="team" onclick="toggleInfo('team9')">
+            <img src="logo9.png" alt="Equipo 9">
+            <h3>Equipo 9</h3>
+        </div>
+        <div class="team" onclick="toggleInfo('team10')">
+            <img src="logo10.png" alt="Equipo 10">
+            <h3>Equipo 10</h3>
+        </div>
+    </div>
+        -->
+    
+    
+    
+    
+    
+        <!-- Información detallada del equipo 1 -->
+    <div id="team1" class="team-info">
+        <h2>Pieles Rojas</h2>
+        <div class="info-container">
+            <!-- Tabla de jugadores -->
+            <div class="table-container">
+                <h3>Jugadores</h3>
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Puntos</th>
+                        <th>Pases de TD</th>
+                        <th>Intercepciones</th>
+                    </tr>
+                    <tr>
+                        <td>Roberto lerma</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Jair Baez</td>
+                        <td>20</td>
+                        <td>47</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Joshua baez</td>
+                        <td>164</td>
+                        <td>2</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Roberto bandilla</td>
+                        <td>12</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Enrrique efrain licona</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Armando lizarraga</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Miguel Angel Osuna Hernández</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Juan copete</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Jonathan Zamora Álvarez</td>
+                        <td>40</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Guillermo Báez de la Mora</td>
+                        <td>17</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Guillermo Alberto Báez León</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Marx Saucedo Perez</td>
+                        <td>6</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>José Nicolás Chávez Meza</td>
+                        <td>6</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Jesús Antonio López Pérez</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Juan Gerardo Padilla Jimenez</td>
+                        <td>71</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- Últimos resultados -->
+            <div class="results-container">
+                <h3>Últimos Resultados</h3>
+                <ul>
+                    <li>Victoria 40-6 contra Tazos Dorados</li>
+                    <li>Derrota 24-30 contra Seahaks</li>
+                    <li>Victoria 49-20 contra Eternals white</li>
+                    <li>Derrota 12-30 contra Penguin</li>
+                    <li>Victoria 50-30 contra Eternals black</li>
+                    <li>Victoria 44-6 contra Aztecas</li>
+                    <li>Derrota 12-44 contra Boom</li>
+                    <li>Victoria 40-6 contra Diablos Drg</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Información detallada del equipo 2 -->
+    <div id="team2" class="team-info">
+        <h2>Aztecas</h2>
+        <div class="info-container">
+            <div class="table-container">
+                <h3>Jugadores</h3>
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Puntos</th>
+                        <th>Pases de TD</th>
+                        <th>Intercepciones</th>
+                    </tr>
+                    <tr>
+                        <td>Edward Ritter</td>
+                        <td>12</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Edgar Delgado</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Juan Manuel Lopez</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Marcelo</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Juan Heredia<tr>
+                          
+                        <td>20</td>
+                        <td>15</td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td>Jaime Zamora</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                
+
+                    <tr>
+                        <td>Oscar Nakashima</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                
+
+                    <tr>
+                        <td>Armando Nacho</td>
+                        <td>40</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                
+                
+                
+                    <tr>
+                        <td>Michell Madrid</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Bryan Gallardo</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                
+                
+                
+                
+                
+                
+                </table>
+            </div>
+            <div class="results-container">
+                <h3>Últimos Resultados</h3>
+                <ul>
+                    <li>Derrota 6-24 contra Diablos Drg </li>
+                    <li>Derrota 10-44 contra Eternals black</li>
+                    <li>Derrota 20-44 contra Seahaks</li>
+                    <li>Derrota 0-50 contra Pieles rojas</li>
+                    <li>Victoria 20-0 contra Eternals white</li>
+                    <li>Derrota 6-50 contra Penguin</li>
+                    <li>Victoria 12-6 contra 49 SF</li>
+                    <li>Derrota 34-20 contra Boom</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="team3" class="team-info">
+        <h2>Boom</h2>
+        <div class="info-container">
+            <div class="table-container">
+                <h3>Jugadores</h3>
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Puntos</th>
+                        <th>Asistencias</th>
+                        <th>Intercepciones</th>
+                    </tr>
+                    <tr>
+                        <td>Alfredo Páez Ramírez</td>
+                        <td>6</td>
+                        <td>31</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>José Manuel Flores Venegas</td>
+                        <td>12</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Brian A Vacations</td>
+                        <td>104</td>
+                        <td>10</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Jesús Martínez Valdez</td>
+                        <td>70</td>
+                        <td>0</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>22</td>
+                        <td>6</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Sergio Sánchez Ibarra</td>
+                        <td>12</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Juan Gerardo Padilla Soria</td>
+                        <td>14</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>vladimir delgado</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Ulises David Padilla Soria</td>
+                        <td>6</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Carlos García Maynez</td>
+                        <td>20</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Rodolfo Rodríguez</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                   
+                </table>
+            </div>
+            <div class="results-container">
+                <h3>Últimos Resultados</h3>
+                <ul>
+                    <li>Victoria 50-12 contra Aztecas</li>
+                    <li>Victoria 20-6 contra Tazos dorados</li>
+                    <li>Victoria 38-20 contra Eternals black</li>
+                    <li>Victoria 32-30 contra Seahaks</li>
+                    <li>Victoria 50-0 contra Eternals white</li>
+                    <li>Victoria 38-20 contra Pieles rojas</li>
+                    <li>Derrota 28-32 contra Penguin</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="team4" class="team-info">
+        <h2>Penguin</h2>
+        <div class="info-container">
+            <div class="table-container">
+                <h3>Jugadores</h3>
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Puntos</th>
+                        <th>Asistencias</th>
+                        <th>Intercepciones</th>
+                    </tr>
+                    <tr>
+                        <td>Gustavo Sanchez</td>
+                        <td>20</td>
+                        <td>3</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>Luis Castro</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Edson Rodriguez</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Omar Ibarra</td>
+                        <td>24</td>
+                        <td>0</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Diego Enciso<td>
+                        <td>6</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Kevin Sanchez</td>
+                        <td>80</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Anguiano</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Omar ibarrra</td>
+                        <td>0</td>
+                        <td>30</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Pablo Ymay</td>
+                        <td>68</td>
+                        <td>2</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>diego alfonso bañuelos</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>4</td>
+                    </tr>
+                    
+                </table>
+            </div>
+            <div class="results-container">
+                <h3>Últimos Resultados</h3>
+                <ul>
+                    <li>Victoria 40-12 contra Boom</li>
+                    <li>Victoria 48-6 contra Pieles rojas</li>
+                    <li>Victoria 50-10 contra Seahaks</li>
+                    <li>Victoria 44-20 contra Eternals Black</li>
+                    <li>Victoria 38-20 contra Aztecas</li>
+                    <li>Victoria 24-12 contra Tazos dorados</li>
+                    <li>Victoria 40-30 contra Eternals white</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="team5" class="team-info">
+        <h2>Eternals Black</h2>
+        <div class="info-container">
+            <div class="table-container">
+                <h3>Jugadores</h3>
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Puntos</th>
+                        <th>Asistencias</th>
+                        <th>Intercepciones</th>
+                    </tr>
+                    <tr>
+                        <td>jose gerardo gonzales</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>alexis alvarado</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>alexis juventino cedano</td>
+                        <td>10</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>miguel angel guzman guillen</td>
+                        <td>12</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>marlon andree castro medina</td>
+                        <td>22</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>arnulfo contreras</td>
+                        <td>10</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>rodrigo fregozo rivera</td>
+                        <td>14</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>nelson abner benitez</td>
+                        <td>21</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>juan pablo torres alvarez</td>
+                        <td>16</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    
+                </table>
+            </div>
+            <div class="results-container">
+                <h3>Últimos Resultados</h3>
+                <ul>
+                    <li>Derrota 30-38 contra seahaks</li>
+                    <li>Victoria 28-22 contra Aztecas</li>
+                    <li>Derrota 68-10 contra Penguin</li>
+                    <li>Victoria 12-0 contra Eternals white</li>
+                    <li>Derrota 30-6 contra boom</li>
+                    <li>Victoria 44-12 contra Tazos dorados</li>
+                    <li>Derrota 30-12 Pieles rojas</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="team6" class="team-info">
+        <h2>Seahaks</h2>
+        <div class="info-container">
+            <div class="table-container">
+                <h3>Jugadores</h3>
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Puntos</th>
+                        <th>Asistencias</th>
+                        <th>Intercepcions</th>
+                    </tr>
+                    <tr>
+                        <td>LUIS SAUL CHICUATETIZNADO</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>JOSE OMAR MORALES PALMERIN</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>CARLOS ALONSO CARDOS GAXIOLA</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>JOSE DAVID BERNAL QUINTERO</td>
+                        <td>10</td>
+                        <td>0</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>LUIS ARTURO IRAZABA ROSAS</td>
+                        <td>29</td>
+                        <td>28</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>AQUILES BERNAL CHICUATE</td>
+                        <td>14</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>DAVID JATNAEEL LEDESMA GAMBOA</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>ASAEL ANTON LOPEZ</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>OSCAR ERNESTO PEREZ NAKASHIMA</td>
+                        <td>6</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>MIGUELA ANTONIO GARCIA ALARCON</td>
+                        <td>40</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>ELIAS ALAEJANDRO GARCIA PADILLA</td>
+                        <td>8</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Esteban León</td>
+                        <td>23</td>
+                        <td>6</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>CARLOS ALBERTO DIAZ ZAMORA</td>
+                        <td>10</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>EDGAR DANIEL DELGADO PRADO</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>JOSE MARTIN MORENO CALVO</td>
+                        <td>74</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="results-container">
+                <h3>Últimos Resultados</h3>
+                <ul>
+                    <li>Victoria 40-12 contra Aztecas</li>
+                    <li>Victoria 30-8 contra Eternals white</li>
+                    <li>Derrota 20-42 contra Eternals black</li>
+                    <li>Victoria 38-30 contra Pieles rojas</li>
+                    <li>Derrota 50-28 contra Boom</li>
+                    <li>Victoria 38-20 contra Tazos dorados</li>
+                    <li>Derrota 24-50 contra Penguin</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="team7" class="team-info">
+        <h2>Tazos Dorados</h2>
+        <div class="info-container">
+            <div class="table-container">
+                <h3>Jugadores</h3>
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Puntos</th>
+                        <th>Asistencias</th>
+                        <th>Rebotes</th>
+                    </tr>
+                    <tr>
+                        <td>Eduardo Antonio Monjaraz Ramírez</td>
+                        <td>6</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td>Carlos Arturo Anguiano Cedillo</td>
+                        <td>10</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Samuel Ramirez González</td>
+                        <td>20</td>
+                        <td>4</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Kevin Sánchez Urías</td>
+                        <td>12</td>
+                        <td>3</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Alberto Rubio</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Vicente Ortega</td>
+                        <td>12</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                 
+                    <tr>
+                        <td>Cristian Erubiel Dominguez Rodriguez</td>
+                        <td>16</td>
+                        <td>4</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Oscar Adolfo Mayorquin Osuna</td>
+                        <td>00</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    
+                    
+                    
+                </table>
+            </div>
+            <div class="results-container">
+                <h3>Últimos Resultados</h3>
+                <ul>
+                    <li>Derrotaa 18-38 contra Boom</li>
+                    <li>Derrota 6-60 contra Penguin</li>
+                    <li>Derrota 20-24 contra Pieles rojas</li>
+                    <li>Derrota 12-40 contra Seahaks</li>
+                    <li>Derrota 12-38 contra Eternals black</li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="team8" class="team-info">
+        <h2>Eternals White</h2>
+        <div class="info-container">
+            <div class="table-container">
+                <h3>Jugadores</h3>
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Puntos</th>
+                        <th>Asistencias</th>
+                        <th>Rebotes</th>
+                    </tr>
+                    
+                    
+                    
+               
+                    
+                   
+                   
+                    
+                  
+                    
+                    
+                 
+                    
+                    
+                    <tr>
+                        <td>martin alberto villarreal</td>
+                        <td>17</td>
+                        <td>5</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>Pablo Ymay</td>
+                        <td>18</td>
+                        <td>7</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>pedro antonio burgos</td>
+                        <td>15</td>
+                        <td>4</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>ricardo santiago garibay</td>
+                        <td>12</td>
+                        <td>3</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>hector pollano</td>
+                        <td>22</td>
+                        <td>6</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>victor gomez carrillo</td>
+                        <td>19</td>
+                        <td>8</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>jose robledo</td>
+                        <td>14</td>
+                        <td>5</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>Federico Cordero</td>
+                        <td>21</td>
+                        <td>7</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>Héctor Muñoz</td>
+                        <td>16</td>
+                        <td>4</td>
+                        <td>7</td>
+                    </tr>
+                 
+                    <tr>
+                        <td>jesus peraza sanchez</td>
+                        <td>12</td>
+                        <td>2</td>
+                        <td>5</td>
+                    </tr>
+               
+                    <tr>
+                        <td>ricardo osuna copado</td>
+                        <td>15</td>
+                        <td>4</td>
+                        <td>8</td>
+                    </tr>
+                   
+                    <tr>
+                        <td>carlos elioth camacho</td>
+                        <td>13</td>
+                        <td>4</td>
+                        <td>7</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="results-container">
+                <h3>Últimos Resultados</h3>
+                <ul>
+                    <li>Victoria 20-6 contra Aztecas</li>
+                    <li>Victoria 30-20 contra 49 sf</li>
+                    <li>Derrota 68-71 contra Boom</li>
+                    <li>Derrota 85-80 contra Penguin</li>
+                    <li>Derrota 75-77 contra Seahaks</li>
+                    <li>Derrota 89-83 contra Pieles rojas</li>
+                    <li>Derrota 70-92 contra Eternals black</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Puedes continuar con los equipos 3-10 siguiendo la misma estructura -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
