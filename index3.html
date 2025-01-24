@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Tienda deportiva online con un catálogo dividido en categorías y un buscador para encontrar prendas fácilmente.">
+    <title>Tienda Deportiva Online</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #008000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 5px;
+            height: 60px;
+        }
+
+        header form {
+            margin-top: 10px;
+        }
+
+        header input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        header button {
+            padding: 10px 20px;
+            background-color: #ffff00;
+            color: #008000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        header button:hover {
+            background-color: #e0e000;
+        }
+
+        main {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .catalog {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .catalog h2 {
+            margin-bottom: 15px;
+            color: #008000;
+        }
+
+        .product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+        .product img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .product-info p {
+            color: #666;
+        }
+
+
+        .img-header {
+
+
+        width: 140px ;
+        height: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="imagenes/flagmaz.jpg" alt="Logo Tienda" class="img-header">
+        <h1>Tienda Deportiva Online</h1>
+        <form>
+            <input type="text" placeholder="Buscar prendas...">
+            <button type="submit">Buscar</button>
+        </form>
+    </header>
+
+    <main>
+        <div class="catalog">
+            <h2>Ropa Deportiva</h2>
+            <div class="product">
+                <img src="https://via.placeholder.com/100" alt="Camiseta deportiva">
+                <div class="product-info">
+                    <h3>Camiseta Deportiva</h3>
+                    <p>$25.00</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/100" alt="Pantalón deportivo">
+                <div class="product-info">
+                    <h3>Pantalón Deportivo</h3>
+                    <p>$40.00</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/100" alt="Sudadera deportiva">
+                <div class="product-info">
+                    <h3>Sudadera Deportiva</h3>
+                    <p>$50.00</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/100" alt="Short deportivo">
+                <div class="product-info">
+                    <h3>Short Deportivo</h3>
+                    <p>$20.00</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/100" alt="Chamarra térmica">
+                <div class="product-info">
+                    <h3>Chamarra Térmica</h3>
+                    <p>$60.00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="catalog">
+            <h2>Calzado</h2>
+            <div class="product">
+                <img src="https://via.placeholder.com/100" alt="Zapatillas running">
+                <div class="product-info">
+                    <h3>Zapatillas Running</h3>
+                    <p>$60.00</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/100" alt="Botas de fútbol">
+                <div class="product-info">
+                    <h3>Botas de Fútbol</h3>
+                    <p>$80.00</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/100" alt="Sandalias deportivas">
+                <div class="product-info">
+                    <h3>Sandalias Deportivas</h3>
+                    <p>$20.00</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/100" alt="Tenis de baloncesto">
+                <div class="product-info">
+                    <h3>Tenis de Baloncesto</h3>
+                    <p>$90.00</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/100" alt="Zapatos de trekking">
+                <div class="product-info">
+                    <h3>Zapatos de Trekking</h3>
+                    <p>$100.00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="catalog">
+            <h2>Accesorios</h2>
+            <div class="product">
+                <img src="https://via.placeholder.com/100" alt="Mochila deportiva">
+                <div class="product-info">
+                    <h3>Mochila Deportiva</h3>
+                    <p>$35.00</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/100" alt="Gorra deportiva">
+                <div class="product-info">
+                    <h3>Gorra Deportiva</h3>
+                    <p>$15.00</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/100" alt="Botella deportiva">
+                <div class="product-info">
+                    <h3>Botella Deportiva</h3>
+                    <p>$10.00</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/100" alt="Cinturón deportivo">
+                <div class="product-info">
+                    <h3>Cinturón Deportivo</h3>
+                    <p>$25.00</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/100" alt="Toalla de microfibra">
+                <div class="product-info">
+                    <h3>Toalla de Microfibra</h3>
+                    <p>$12.00</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
