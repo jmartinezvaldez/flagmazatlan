@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Tienda deportiva online con un catálogo dividido en categorías y un buscador para encontrar prendas fácilmente.">
     <title>Tienda Deportiva Online</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://www.paypal.com/sdk/js?client-id=sb"></script> <!-- SDK de PayPal -->
     <style>
         * {
             margin: 0;
@@ -15,248 +13,344 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
+                /* Ajustes generales */
+         body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #00A6A6, #6BCF6F, #FDC830);
+            color: #fff;
             padding: 20px;
         }
 
+        /* Encabezado con la imagen */
         header {
-            background-color: #008000;
+            display: grid;
+            grid-template-columns: auto 1fr; /* La imagen ocupa su tamaño, el texto el resto */
+            align-items: center;
+           background: url('URL_DE_TU_IMAGEN_AQUÍ') center/cover no-repeat;
             color: white;
-            padding: 20px;
-            text-align: center;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-        header h1 {
-            font-size: 2rem;
-        }
+             padding: 20px;
+             text-align: center;
+            font-size: 28px;
+             font-weight: bold;
+             border-radius: 15px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                   }
 
         header img {
-            position: absolute;
-            top: 10px;
-            left: 5px;
-            height: 60px;
+             width: 200px;
+           height: 200px;
+           border-radius: 10px;
+            }
+
+        header h1 {
+            margin: 0;
         }
 
-        header form {
-            margin-top: 10px;
+        /* Menú de navegación */
+        nav {
+            background: rgba(0, 128, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
         }
 
-        header input[type="text"] {
-            width: 70%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            margin-right: 10px;
-        }
-
-        header button {
-            padding: 10px 20px;
-            background-color: #ffff00;
-            color: #008000;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
             font-weight: bold;
+            margin: 0 15px;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
         }
 
-        header button:hover {
-            background-color: #e0e000;
+        nav a:hover {
+            background: rgba(255, 215, 0, 0.8);
+            color: #004d00;
         }
 
+        /* Contenedor de productos */
         main {
             display: flex;
-            gap: 20px;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: center;
         }
 
         .catalog {
-            flex: 1;
-            min-width: 300px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+           background: rgba(255, 255, 255, 0.9);
+            color: #000;
+             padding: 20px;
+                border-radius: 10px;
+                width: 30%;
+              margin: 25px 15px; /* Aumenta el margen vertical (25px) */
+                 text-align: center;
+                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
-        .catalog h2 {
-            margin-bottom: 15px;
-            color: #008000;
-        }
-
+        /* Tarjetas de producto */
         .product {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #ddd;
-            padding: 15px 0;
-        }
+          display: flex;
+          align-items: center;
+              justify-content: space-between;
+          margin-bottom: 100px; /* Aumenta este valor para más espacio vertical */
+            padding: 15px;
+               border-bottom: 2px solid #ddd;
+             background: #f9f9f9;
+                border-radius: 10px;
+                }
 
         .product img {
-            width: 100px;
-            height: 100px;
+            width: 120px;
             border-radius: 10px;
-            margin-right: 20px;
+            margin-right: 15px;
         }
 
-        .product-info {
-            flex: 1;
-        }
-
-        .product-info h3 {
-            font-size: 1.2rem;
+        .product h3 {
+            font-size: 16px;
             margin-bottom: 5px;
         }
 
-        .product-info p {
-            color: #666;
+        .product p {
+            font-weight: bold;
+            color: #FFA500;
+        }
+
+        /* Botón de compra */
+        .product button {
+            background: #FFA500;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .product button:hover {
+            background: #FF8C00;
+        }
+
+        select {
+            padding: 5px;
+            margin-top: 5px;
         }
 
 
-        .img-header {
+        #cart {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+            padding: 15px;
+            border-radius: 10px;
+            width: 300px;
+        }
 
+        #cart h3 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
 
-        width: 140px ;
-        height: 120px;
+        #cart ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #cart ul li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #cart ul li button {
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px 8px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #paypal-button-container {
+            margin-top: 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .cart-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .clear-cart {
+            background: red;
+            color: white;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .clear-cart:hover {
+            background: darkred;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <img src="imagenes/flagmaz.jpg" alt="Logo Tienda" class="img-header">
-        <h1>Tienda Deportiva Online</h1>
-        <form>
-            <input type="text" placeholder="Buscar prendas...">
-            <button type="submit">Buscar</button>
-        </form>
+
+    <header><img src="imagenes/WhatsApp Image 2025-02-20 at 2.00.16 AM.jpeg">
+        
+        <h1>tienda online</h1> 
+
+
+
     </header>
 
-    <main>
-        <div class="catalog">
-            <h2>Ropa Deportiva</h2>
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Camiseta deportiva">
-                <div class="product-info">
-                    <h3>Camiseta Deportiva</h3>
-                    <p>$25.00</p>
-                </div>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Pantalón deportivo">
-                <div class="product-info">
-                    <h3>Pantalón Deportivo</h3>
-                    <p>$40.00</p>
-                </div>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Sudadera deportiva">
-                <div class="product-info">
-                    <h3>Sudadera Deportiva</h3>
-                    <p>$50.00</p>
-                </div>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Short deportivo">
-                <div class="product-info">
-                    <h3>Short Deportivo</h3>
-                    <p>$20.00</p>
-                </div>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Chamarra térmica">
-                <div class="product-info">
-                    <h3>Chamarra Térmica</h3>
-                    <p>$60.00</p>
-                </div>
-            </div>
-        </div>
+    <nav>
+        <a onclick="filterCategory('all')">Todos</a>
+        <a onclick="filterCategory('ropa')">Ropa</a>
+        <a onclick="filterCategory('calzado')">Calzado</a>
+        <a onclick="filterCategory('accesorios')">Accesorios</a>
+    </nav>
 
-        <div class="catalog">
-            <h2>Calzado</h2>
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Zapatillas running">
-                <div class="product-info">
-                    <h3>Zapatillas Running</h3>
-                    <p>$60.00</p>
-                </div>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Botas de fútbol">
-                <div class="product-info">
-                    <h3>Botas de Fútbol</h3>
-                    <p>$80.00</p>
-                </div>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Sandalias deportivas">
-                <div class="product-info">
-                    <h3>Sandalias Deportivas</h3>
-                    <p>$20.00</p>
-                </div>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Tenis de baloncesto">
-                <div class="product-info">
-                    <h3>Tenis de Baloncesto</h3>
-                    <p>$90.00</p>
-                </div>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Zapatos de trekking">
-                <div class="product-info">
-                    <h3>Zapatos de Trekking</h3>
-                    <p>$100.00</p>
-                </div>
-            </div>
-        </div>
+    <main id="product-container"></main>
 
-        <div class="catalog">
-            <h2>Accesorios</h2>
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Mochila deportiva">
-                <div class="product-info">
-                    <h3>Mochila Deportiva</h3>
-                    <p>$35.00</p>
-                </div>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Gorra deportiva">
-                <div class="product-info">
-                    <h3>Gorra Deportiva</h3>
-                    <p>$15.00</p>
-                </div>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Botella deportiva">
-                <div class="product-info">
-                    <h3>Botella Deportiva</h3>
-                    <p>$10.00</p>
-                </div>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Cinturón deportivo">
-                <div class="product-info">
-                    <h3>Cinturón Deportivo</h3>
-                    <p>$25.00</p>
-                </div>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/100" alt="Toalla de microfibra">
-                <div class="product-info">
-                    <h3>Toalla de Microfibra</h3>
-                    <p>$12.00</p>
-                </div>
-            </div>
+    <div id="cart">
+        <h3>Carrito</h3>
+        <ul id="cart-list"></ul>
+        <p>Total: $<span id="total">0</span></p>
+        <div class="cart-actions">
+            <button class="clear-cart" onclick="clearCart()">Vaciar carrito</button>
         </div>
-    </main>
+        <div id="paypal-button-container"></div>
+    </div>
+
+    <script>
+        let cart = [];
+
+        function addToCart(name, price, sizeId) {
+                let size = sizeId ? document.getElementById(sizeId).value : "N/A";
+                cart.push({ name, price, size });
+                updateCart();
+            }
+
+            function updateCart() {
+                const cartList = document.getElementById('cart-list');
+                const total = document.getElementById('total');
+                cartList.innerHTML = '';
+                let sum = 0;
+                cart.forEach((item, index) => {
+                    sum += item.price;
+                    cartList.innerHTML += `<li>${item.name} (${item.size}) - $${item.price} <button onclick="removeFromCart(${index})">❌</button></li>`;
+                });
+                total.innerText = sum.toFixed(2);
+            }
+
+            generateProducts();
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function clearCart() {
+            cart = [];
+            updateCart();
+        }
+
+        paypal.Buttons({
+            createOrder: (data, actions) => {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: { value: document.getElementById('total').innerText }
+                    }]
+                });
+            },
+            onApprove: (data, actions) => {
+                return actions.order.capture().then(details => {
+                    alert(`Pago realizado por ${details.payer.name.given_name}`);
+                    clearCart();
+                });
+            }
+        }).render('#paypal-button-container');
+
+        function filterCategory(category) {
+            document.querySelectorAll('.catalog').forEach(cat => {
+                cat.style.display = category === 'all' || cat.classList.contains(category) ? 'block' : 'none';
+            });
+        }
+    
+   
+    function generateProducts() {
+            const categories = {
+                ropa: [
+                    { name: "Camiseta", img: "https://cdn.pixabay.com/photo/2017/06/10/07/21/t-shirt-2383704_960_720.png" },
+                    { name: "Pantalón", img: "https://cdn.pixabay.com/photo/2013/07/13/12/29/jeans-159071_960_720.png" },
+                    { name: "Sudadera", img: "https://cdn.pixabay.com/photo/2014/04/03/11/52/hoodie-310176_960_720.png" }
+                ],
+                calzado: [
+                    { name: "Zapatillas Running", img: "https://cdn.pixabay.com/photo/2017/08/01/00/15/shoes-2564199_960_720.jpg" },
+                    { name: "Botas de Fútbol", img: "https://cdn.pixabay.com/photo/2017/06/21/00/43/soccer-2427091_960_720.jpg" }
+                ],
+                accesorios: [
+                    { name: "Gorra", img: "https://cdn.pixabay.com/photo/2016/11/19/17/47/cap-1846117_960_720.png" },
+                    { name: "Mochila", img: "https://cdn.pixabay.com/photo/2014/04/03/11/53/backpack-310184_960_720.png" }
+                ]
+            };
+
+            let productContainer = document.getElementById('product-container');
+            productContainer.innerHTML = ''; // Limpiar antes de agregar productos
+
+            for (let category in categories) {
+                let catalog = document.createElement('div');
+                catalog.className = `catalog ${category}`;
+                catalog.innerHTML = `<h2>${category.charAt(0).toUpperCase() + category.slice(1)}</h2>`;
+
+                categories[category].forEach((product, index) => {
+                    let price = (Math.random() * (100 - 10) + 10).toFixed(2);
+                    let sizeOptions = category !== "accesorios"
+                        ? `<select id="size-${product.name}-${index}">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                      </select>`
+                        : "";
+
+                    catalog.innerHTML += `
+                <div class="product">
+                    <img src="${product.img}" alt="${product.name} ${index + 1}">
+                    <div>
+                        <h3>${product.name} ${index + 1}</h3>
+                        <p>$${price}</p>
+                        ${sizeOptions}
+                        <button onclick="addToCart('${product.name} ${index + 1}', ${price}, '${category !== "accesorios" ? `size-${product.name}-${index}` : ''}')">Añadir al carrito</button>
+                    </div>
+                </div>`;
+                });
+
+                productContainer.appendChild(catalog);
+            }
+        }
+
+    
+    
+    
+    
+    
+    
+    </script>
+
 </body>
 
 </html>
