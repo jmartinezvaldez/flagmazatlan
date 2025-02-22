@@ -139,16 +139,29 @@
 
 
         #cart {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            color: black;
-            padding: 15px;
-            border-radius: 10px;
-            width: 300px;
-        }
+                   position: fixed;
+               top: 20px;
+           right: 20px;
+             background: rgba(255, 255, 255, 0.9);
+             color: black;
+           padding: 15px;
+                    border-radius: 10px;
+                 width: 300px;
+            max-height: 80vh;
+             display: flex;
+           flex-direction: column;
+              }
 
+         .cart-content {
+               overflow-y: auto; /* Contenido desplazable */
+                flex-grow: 1; /* Ocupa el espacio restante */
+               }
+
+         .cart-footer {
+             flex-shrink: 0; /* Evita que se reduzca */
+              padding-top: 15px;
+                  border-top: 1px solid #ddd;
+            }
         #cart h3 {
             text-align: center;
             margin-bottom: 15px;
@@ -227,12 +240,16 @@
 
     <div id="cart">
         <h3>Carrito</h3>
-        <ul id="cart-list"></ul>
-        <p>Total: $<span id="total">0</span></p>
-        <div class="cart-actions">
-            <button class="clear-cart" onclick="clearCart()">Vaciar carrito</button>
+        <div class="cart-content">
+            <ul id="cart-list"></ul>
         </div>
-        <div id="paypal-button-container"></div>
+        <div class="cart-footer">
+            <p>Total: $<span id="total">0</span></p>
+            <div class="cart-actions">
+                <button class="clear-cart" onclick="clearCart()">Vaciar carrito</button>
+            </div>
+            <div id="paypal-button-container"></div>
+        </div>
     </div>
 
     <script>
